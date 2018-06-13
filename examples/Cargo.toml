@@ -1,0 +1,20 @@
+[package]
+name = "gfx-render-examples"
+version = "0.1.0"
+publish = false
+workspace = ".."
+
+[[bin]]
+name = "triangle"
+path = "triangle/src/main.rs"
+
+[dependencies]
+
+simple_logger = "*"
+log = "*"
+
+winit = "*"
+
+gfx-render = { path = "../gfx-render", features = ["gfx-backend-vulkan"] }
+
+gfx-hal = { git = "https://github.com/gfx-rs/gfx", rev = "63826ab79", features = ["serde"] }

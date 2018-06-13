@@ -100,7 +100,6 @@ where
         target.render.take().map(|render| render.dispose(factory, data));
         target.render = Some(render(&mut target.surface, &self.families.families, factory, data).map_err(|err| err.into().context("Failed to build render"))?);
 
-
         Ok(())
     }
 
